@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import '../../routes/routes.js';
+import '../../lib/routes.js';
 import './body.html';
 
 Template.body.helpers({

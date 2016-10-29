@@ -1,5 +1,28 @@
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/">Joke Wall</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class><a href="/profile">Profile</a></li>
+            <li class><a href="/new">New Jokes</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+</body>
 
+<template name="home">
+  <br>
+  <br>
   <h1>Joke Wall</h1>
   <div class="container">
     <ul class="jokes">
@@ -8,8 +31,30 @@
       {{/each}}
     </ul>
   </div>
-</body>
+</template>
 
 <template name="joke">
   <li>{{text}}</li>
+</template>
+
+<template name = "newJoke">
+    <div class="container" id="newContainer">
+        <form id="newJoke">
+            <div class="form-group">
+              <label for="leadUp">Lead Up</label>
+              <input type="text" class="form-control" id="leadUp" placeholder="Knock Knock.Orange">
+            </div>
+            <div class="form-group">
+              <label for="punchLine">Punch Line</label>
+              <input type="text" class="form-control" id="punchLine" placeholder="Orange you glad you heard this joke">
+            </div>
+            <div class="tags">
+              <label for="tags">Tags</label>
+              <input type="text" class="form-control" id="tags" placeholder="#SFW #Funny">
+            </div>
+            <div>
+              <button type="submit" class="btn btn-default">Submit</button>
+            </div>
+        </form>
+    </div>
 </template>
